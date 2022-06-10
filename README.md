@@ -1,22 +1,26 @@
 # media_server_stack
-Disclaimer - This content is for educational purposes only!!
+* Disclaimer - This content is for educational purposes only!!
+* Disclaimer - I'm not an expert but a well-rounded IT Engineer/Developer/Architect/Management for many years. This is my best attempt but may have flaws that need correcting. Please follow the receipe at your own risk OR let me know the flaw and I will do my best to fix it.
+
+# Why
+
+I personally like EIL5 explainations of technology / Just In Time knowledge. I'm not looking on how to be an expert on the topic just gain a little bit of knowledge. My hope to have a media server as a fun side project to learn a bit of docker ended up taking way to long to do. Most guides were either very deep, assumed you already had background knowledge, or wanted you to watch a video that was too long for my attention span/availability due to life. 
 
 # Topics / Keywords - I wish I knew about before starting down this path
 * Hardware - Synology Nas - It seems a lot of people like this brand NAS + unRaid + docker for the solution.
 * Software - There is an OS called unraid (https://unraid.net/) which seems to be very popular for media servers.
-* Knowledge - This Guide here provides a bunch of information: https://trash-guides.info/Hardlinks/How-to-setup-for/Unraid/
+* Knowledge - This Guide here provides a bunch of information: 
+  * https://trash-guides.info/Hardlinks/How-to-setup-for/Unraid/
 * Knowledge - https://geek-cookbook.funkypenguin.co.nz/recipes/autopirate/
 
 
-
-
-Software Used
+# Software Used
 * https://sonarr.tv/ - TV Management
 * https://radarr.video/ - Movie Management
 * https://wiki.servarr.com/prowlarr - Indexer Management
-* plex - media player
+  * ** An indexer is a  
+* https://www.plex.tv/ - media player
 * delige-vpn - Bittorrent client with VPN support
-
 
 # Design
 ![alt text]( design.png )
@@ -25,16 +29,33 @@ Software Used
 * Ubuntu OS
 * A variety of legally obtained videos/TV shows which you have purchased or created yourself.
 * Enough hard disk space to host your videos/shows
-*  
+ 
 
 # High Level Steps
-1. Install the OS
-2. Configure the OS
-3. Install Docker
-4. Modify the .env file
-5. Modify the docker-compose.yml file
+## 1. Install the OS
+## 2. Configure the OS
+### **2a. Mount the external hard drive**
+* (edit fstab) *fstab = File System TABle*
+### **2b. hardlink vs softlink** 
+* I didn't do this but it means to point to the actual file and not make many copies of the same thing.
+### **2c. Security - Decisions Points**
+- 1 USER setup (ROOT) - Run everything as root - easier but not a good idea at all.
+- 2 USERS setup (root + < default ubuntu user >) - This is what I did
+  * Docker runs as ROOT
+  * The docker containers run as < default ubuntu user >
+- 3 Each container runs as its own user and has minimal rights. (Least Rights Model)
+  * Cybersecurity pure and ideal.
+  * This server only contains videos. I don't need this much safety.
+  * I set up my ubuntu instance as a DMZ server and has nothing signed in or associated to this server.
+## 3. Install Docker
 
-# Detailed Steps
+## 4. Modify the .env file
+- This is most of the work
+## 5. Modify the docker-compose.yml file
+- The VPN settings will need to be changed.
+  * *Enhancement - The docker-compose.yml should be idempotent* 
+
+# Detailed Steps / Important Notes / Concepts
 
 
 
