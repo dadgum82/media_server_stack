@@ -1,6 +1,15 @@
 # media_server_stack
 Disclaimer - This content is for educational purposes only!!
 
+# Topics / Keywords - I wish I knew about before starting down this path
+* Hardware - Synology Nas - It seems a lot of people like this brand NAS + unRaid + docker for the solution.
+* Software - There is an OS called unraid (https://unraid.net/) which seems to be very popular for media servers.
+* Knowledge - This Guide here provides a bunch of information: https://trash-guides.info/Hardlinks/How-to-setup-for/Unraid/
+* Knowledge - https://geek-cookbook.funkypenguin.co.nz/recipes/autopirate/
+
+
+
+
 Software Used
 * https://sonarr.tv/ - TV Management
 * https://radarr.video/ - Movie Management
@@ -13,6 +22,22 @@ Software Used
 ![alt text]( design.png )
 
 # Prerequisites 
+* Ubuntu OS
+* A variety of legally obtained videos/TV shows which you have purchased or created yourself.
+* Enough hard disk space to host your videos/shows
+*  
+
+# High Level Steps
+1. Install the OS
+2. Configure the OS
+3. Install Docker
+4. Modify the .env file
+5. Modify the docker-compose.yml file
+
+# Detailed Steps
+
+
+
 docker commands
 sudo docker-compose up -d
 
