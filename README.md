@@ -1,11 +1,18 @@
 # media_server_stack
-This content is for educational purposes only!!
+Disclaimer - This content is for educational purposes only!!
 
 Software Used
-* https://sonarr.tv/
-* https://radarr.video/
-* plex
+* https://sonarr.tv/ - TV Management
+* https://radarr.video/ - Movie Management
+* https://wiki.servarr.com/prowlarr - Indexer Management
+* plex - media player
+* delige-vpn - Bittorrent client with VPN support
 
+
+# Design
+![alt text]( design.png )
+
+# Prerequisites 
 docker commands
 sudo docker-compose up -d
 
