@@ -8,7 +8,6 @@
 I personally like EIL5 explainations of technology / Just In Time knowledge. I'm not looking on how to be an expert on the topic just gain a little bit of knowledge. My hope to have a media server as a fun side project to learn a bit of docker ended up taking way to long to do. Most guides were either very deep, assumed you already had background knowledge, or wanted you to watch a video that was too long for my attention span/availability due to life.
 
 # Topics / Keywords - I wish I knew about before starting down this path
-<<<<<<< HEAD
 * Hardware - Synology NAS - It seems a lot of people like this brand NAS + unRaid + docker for the solution.
 * Software - There is an OS called unraid (https://unraid.net/) which seems to be very popular for media servers.
 * Knowledge - This Guide here provides a bunch of information: 
@@ -26,14 +25,6 @@ I personally like EIL5 explainations of technology / Just In Time knowledge. I'm
 - Knowledge - https://geek-cookbook.funkypenguin.co.nz/recipes/autopirate/
 
 # Software Used
-<<<<<<< HEAD
-* https://sonarr.tv/ - TV Management
-* https://radarr.video/ - Movie Management
-* https://wiki.servarr.com/prowlarr - Indexer Management
-  * ** An indexer is a  
-* https://www.plex.tv/ - media player
-* https://hub.docker.com/r/binhex/arch-delugevpn - Bittorrent client with VPN support
-=======
 
 - https://sonarr.tv/ - TV Management
 - https://radarr.video/ - Movie Management
@@ -41,7 +32,6 @@ I personally like EIL5 explainations of technology / Just In Time knowledge. I'm
   - \*\* An indexer is a
 - https://www.plex.tv/ - media player
 - delige-vpn - Bittorrent client with VPN support
->>>>>>> ad0ad1ef761f583075a6c5670efa74f9af63369b
 
 # Design
 
@@ -74,7 +64,6 @@ I personally like EIL5 explainations of technology / Just In Time knowledge. I'm
   - Docker runs as ROOT
   - The docker containers run as < default ubuntu user >
 - 3 Each container runs as its own user and has minimal rights. (Least Rights Model)
-<<<<<<< HEAD
   * Cybersecurity pure and ideal.
   * This server only contains videos. I don't need this much safety.
   * I set up my ubuntu instance as a DMZ server and has nothing signed in or associated to this server.
@@ -110,7 +99,6 @@ I personally like EIL5 explainations of technology / Just In Time knowledge. I'm
 ### 4. Modify the .env file
 - This is most of the work
 ### 5. Modify the docker-compose.yml file
-=======
   - Cybersecurity pure and ideal.
   - This server only contains videos. I don't need this much safety.
   - I set up my ubuntu instance as a DMZ server and has nothing signed in or associated to this server.
@@ -123,7 +111,6 @@ I personally like EIL5 explainations of technology / Just In Time knowledge. I'm
 
 ## 5. Modify the docker-compose.yml file
 
->>>>>>> ad0ad1ef761f583075a6c5670efa74f9af63369b
 - The VPN settings will need to be changed.
   - _Enhancement - The docker-compose.yml should be idempotent_
 
