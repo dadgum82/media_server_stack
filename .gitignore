@@ -1,0 +1,6 @@
+.env
+media_server/config/*
+sample_docker_compose.yml
+sample2_docker_compose.yml
+help.txt
+.gitignore
