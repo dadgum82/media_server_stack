@@ -7,11 +7,13 @@
 I personally like EIL5 explainations of technology / Just In Time knowledge. I'm not looking on how to be an expert on the topic just gain a little bit of knowledge. My hope to have a media server as a fun side project to learn a bit of docker ended up taking way to long to do. Most guides were either very deep, assumed you already had background knowledge, or wanted you to watch a video that was too long for my attention span/availability due to life. 
 
 # Topics / Keywords - I wish I knew about before starting down this path
-* Hardware - Synology Nas - It seems a lot of people like this brand NAS + unRaid + docker for the solution.
+* Hardware - Synology NAS - It seems a lot of people like this brand NAS + unRaid + docker for the solution.
 * Software - There is an OS called unraid (https://unraid.net/) which seems to be very popular for media servers.
 * Knowledge - This Guide here provides a bunch of information: 
   * https://trash-guides.info/Hardlinks/How-to-setup-for/Unraid/
 * Knowledge - https://geek-cookbook.funkypenguin.co.nz/recipes/autopirate/
+* Helpful Software - Visual Studio Code on Linux - More than a text editor
+  * https://code.visualstudio.com/docs/setup/linux
 
 
 # Software Used
@@ -20,7 +22,7 @@ I personally like EIL5 explainations of technology / Just In Time knowledge. I'm
 * https://wiki.servarr.com/prowlarr - Indexer Management
   * ** An indexer is a  
 * https://www.plex.tv/ - media player
-* delige-vpn - Bittorrent client with VPN support
+* https://hub.docker.com/r/binhex/arch-delugevpn - Bittorrent client with VPN support
 
 # Design
 ![alt text]( design.png )
@@ -47,11 +49,38 @@ I personally like EIL5 explainations of technology / Just In Time knowledge. I'm
   * Cybersecurity pure and ideal.
   * This server only contains videos. I don't need this much safety.
   * I set up my ubuntu instance as a DMZ server and has nothing signed in or associated to this server.
-## 3. Install Docker
+### **2d. Filesystem Folder Structure**
+  * OS Harddrive
+  * External USB Drive (**PERMISSIONS ON FOLDERS IS KEY**)
+    * *Enhancement - content isn't moving correctly from completed to folders*
+    * This is getting closer to ideal folder structure according to guides
+    ```
+    hard drive(os)
+    
+    
+    hard drive (/mnt/external_drive)
+    |- completed
+    |- incomplete
+    |- media
+       |- movies
+       |- tv
+       |- holiday_movies 
+    |- usenet (not using usenet. This is stubbed out.)
+       |- movies
+       |- tv
+       |- holiday_movies 
+    |- torrent
+       |- movies
+       |- tv
+       |- holiday_movies
+    ```
 
-## 4. Modify the .env file
+### 3. Install Docker
+  [Docker Instrucitons](https://docs.docker.com/engine/install/ubuntu/)
+
+### 4. Modify the .env file
 - This is most of the work
-## 5. Modify the docker-compose.yml file
+### 5. Modify the docker-compose.yml file
 - The VPN settings will need to be changed.
   * *Enhancement - The docker-compose.yml should be idempotent* 
 
